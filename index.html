@@ -14,9 +14,13 @@
   <title>Progress Bar</title>
 </head>
 <body>
-  <div class="progress">
+  <div
+    class="progress"
+    data-js-progress
+  >
     <svg
       class="progress__bar"
+      data-js-progress-bar
     >
       <circle
         class="progress__track"
@@ -29,21 +33,36 @@
         cx="160"
         cy="160"
         r="80"
+        data-js-progress-value
       />
     </svg>
     <div class="progress-controls">
       <form class="progress-controls__form">
         <div class="input-group">
           <label for="progress-value-input">Value</label>
-          <input id="progress-value-input" type="text"/>
+          <input 
+            id="progress-value-input"
+            type="text"
+            data-js-progress-input-value
+          />
         </div>
         <div class="input-group">
           <label for="animate-input">Animate</label>
-          <input id="animate-input" class="input" type="checkbox" />
+          <input
+            id="animate-input"
+            class="input"
+            type="checkbox"
+            data-js-progress-checkbox-animate
+          />
         </div>
         <div class="input-group">
           <label for="hide-input">Hide</label>
-          <input id="hide-input" class="input" type="checkbox" />
+          <input
+            id="hide-input"
+            class="input"
+            type="checkbox"
+            data-js-progress-checkbox-hide
+          />
         </div>
       </form>
     </div>
