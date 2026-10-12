@@ -1,71 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-  >
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-  <script type="module" src="script.js"></script>
-  <title>Progress Bar</title>
-</head>
-<body>
-  <div
-    class="progress"
-    data-js-progress
-  >
-    <svg
-      class="progress__bar"
-      data-js-progress-bar
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     >
-      <circle
-        class="progress__track"
-        cx="160"
-        cy="160"
-        r="80"
-      />
-      <circle
-        class="progress__value"
-        cx="160"
-        cy="160"
-        r="80"
-        data-js-progress-value
-      />
-    </svg>
-    <div class="progress-controls">
-      <form class="progress-controls__form">
-        <div class="input-group">
-          <label for="progress-value-input">Value</label>
-          <input 
-            id="progress-value-input"
-            type="text"
-            data-js-progress-input-value
-          />
-        </div>
-        <div class="input-group">
-          <label for="animate-input">Animate</label>
-          <input
-            id="animate-input"
-            class="input"
-            type="checkbox"
-            data-js-progress-checkbox-animate
-          />
-        </div>
-        <div class="input-group">
-          <label for="hide-input">Hide</label>
-          <input
-            id="hide-input"
-            class="input"
-            type="checkbox"
-            data-js-progress-checkbox-hide
-          />
-        </div>
-      </form>
+    <link
+      rel="stylesheet"
+      href="./style/index.css"
+    >
+    <script type="module" src="script.js"></script>
+    <title>Progress Bar</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="progress"></div>
+      <div class="progress-controls"></div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

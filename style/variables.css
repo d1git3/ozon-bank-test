@@ -1,0 +1,25 @@
+:root {
+  --color-accent: #005cfe;
+  --color-light: #eef3f6;
+
+  --container-width: 320px;
+  --container-height: 568px;
+
+  --progress-bar-container-size: 160px;
+  --progress-stroke-width: 13;
+
+  --input-width: 50px;
+
+  --checkbox-padding: 2px;
+  --checkbox-thumb-size: 26px;
+  --checkbox-thumb-offset: 20px;
+
+  --transition-duration: 0.2s;
+  --transition-duration-long: 0.4s;
+
+  @media (orientation: landscape) {
+    --container-width: 568px;
+    --container-height: 320px;
+  }
+}
+
