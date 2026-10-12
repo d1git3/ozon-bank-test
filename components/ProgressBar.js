@@ -66,7 +66,7 @@ export default class ProgressBar {
   }
 
   get offset() {
-    return this.circumference * ((100 - this.state.value) / 100)
+    return this.circumference * ((100 - this.value) / 100)
   }
 
   get value() {

@@ -1,4 +1,4 @@
-import { setSelector } from "../utils"
+import { setSelector } from "../utils.js"
 
 
 export default class ProgressControls {
@@ -30,37 +30,6 @@ export default class ProgressControls {
     this.hideCheckboxElement = this.rootElement.querySelector(this.selectors.hideCheckbox)
 
     this.bindEvents()
-  }
-
-  onValueInputChange(value) {
-    if (value.trim() === "") {
-      return;
-    }
-
-    const number = Number(value);
-
-    if (!Number.isFinite(number)) {
-      this.progressBar.setValue(0);
-      this.valueInputElement.value = ""
-      return;
-    }
-
-    const normalizedValue = Math.min(100, Math.max(0, number));
-
-    this.progressBar.setValue(normalizedValue);
-    this.valueInputElement.value = normalizedValue;
-  }
-
-  onAnimateCheckboxClick(isAnimated) {
-    this.progressBar.setAnimated(isAnimated)
-  }
-
-  onHideCheckboxClick(isHidden) {
-    this.progressBar.setHidden(isHidden)
-  }
-
-  onFormSubmit(event) {
-    event.preventDefault()
   }
 
   render() {
@@ -103,6 +72,27 @@ export default class ProgressControls {
         </div>
       </form>
     `
+  }
+
+  onValueInputChange(value) {
+    const number = Number(value);
+
+    const normalizedValue = Math.min(100, Math.max(0, number));
+
+    this.progressBar.setValue(normalizedValue);
+    this.valueInputElement.value = normalizedValue;
+  }
+
+  onAnimateCheckboxClick(isAnimated) {
+    this.progressBar.setAnimated(isAnimated)
+  }
+
+  onHideCheckboxClick(isHidden) {
+    this.progressBar.setHidden(isHidden)
+  }
+
+  onFormSubmit(event) {
+    event.preventDefault()
   }
 
   bindEvents() {
