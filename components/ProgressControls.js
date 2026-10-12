@@ -1,4 +1,4 @@
-import { setSelector } from "/utils.js"
+import { setSelector } from "../utils"
 
 
 export default class ProgressControls {
